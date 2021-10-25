@@ -97,9 +97,7 @@ def lambda_handler(event, context):
     driver = webdriver.Remote(command_executor=remote_url, desired_capabilities=DesiredCapabilities.CHROME)
     logging.info("Created the remote webdriver session: " + driver.session_id)
 
-
-
-    logging.info('opening aws billing page')
+    logging.info('opening ordernet page')
     driver.maximize_window()
     driver.get("https://meitav.ordernet.co.il/")
     sleep(8)
